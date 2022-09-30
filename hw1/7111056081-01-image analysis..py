@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import csv
 print("hi")
-
+#123
 def sol(ques):
     print(ques)
     img = cv2.imread(ques+".png")
