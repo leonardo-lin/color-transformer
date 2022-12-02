@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 def sol(n,pic_name,secret_text):
-    
+    #read image file
     img = cv2.imread(pic_name+".png")
     source_r_channel=[]
     source_b_channel=[]
@@ -19,6 +19,8 @@ def sol(n,pic_name,secret_text):
     print((source_r_channel[0:30]))
     print((source_g_channel[0:30]))
     print((source_b_channel[0:30]))
+    
+    #set some count
     cnt=0
     rhead=0  
     ghead=0
@@ -36,6 +38,7 @@ def sol(n,pic_name,secret_text):
             s=(secret_text[turn]-f_tot)%(dob_n)        
             print(secret_text[turn],f_tot,s)
             print("rhead=",rhead,n)
+            #0 don't move,<n plus , >n minus
             if s==0:
                 print("s=0")
                 pass
@@ -58,6 +61,7 @@ def sol(n,pic_name,secret_text):
             s=(secret_text[turn]-f_tot)%(dob_n)        
             print(secret_text[turn],f_tot,s)
             print("ghead=",ghead,n)
+            #0 don't move,<n plus , >n minus
             if s==0:
                 print("s=0")
                 pass
@@ -80,6 +84,7 @@ def sol(n,pic_name,secret_text):
             s=(secret_text[turn]-f_tot)%(dob_n)        
             print(secret_text[turn],f_tot,s)
             print("bhead=",bhead,n)
+            #0 don't move,<n plus , >n minus
             if s==0:
                 print("s=0")
                 pass
@@ -107,7 +112,8 @@ def sol(n,pic_name,secret_text):
             result[i][j].append(source_g_channel[cnt])
             result[i][j].append(source_r_channel[cnt])
             cnt+=1
-    error=0        
+    
+         
     print(len(result),len(result[0]))
     for i in range(len(result)):
         for j in range(len(result[0])):
