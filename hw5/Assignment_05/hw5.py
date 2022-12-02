@@ -135,7 +135,7 @@ if __name__ == "__main__":
     while(n<2 or n>10):
         n=input("Input number of pixels in a cluster (n): ")
         n=int(n)
-    #pic_name=input("Input cover image: ")
+    pic_name=input("Input cover image: ")
     seed=2022
     random.seed(seed)
     text=random.random()
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     secret_text=secret_text[::-1]
     print(secret_text)
 
-    sol(n,'pexels-pixabay-210186',secret_text)
+    sol(n,pic_name,secret_text)
 
 
 
