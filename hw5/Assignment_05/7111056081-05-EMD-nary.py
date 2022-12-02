@@ -26,7 +26,7 @@ def sol(n,pic_name,secret_text):
     dob_n=2*n+1
     print(dob_n)
     for turn in range(len(secret_text)):
-        
+        #red channel
         if cnt%3==0:
             f_tot=0
             for i in range(n):
@@ -47,6 +47,8 @@ def sol(n,pic_name,secret_text):
                 print("twin",rhead,s,rhead+n+n-s)
             print(source_r_channel[0:30])
             rhead+=n
+            
+        #green channel    
         elif cnt%3==1:
             f_tot=0
             for i in range(n):
@@ -67,6 +69,8 @@ def sol(n,pic_name,secret_text):
                 print("twin",ghead,s,ghead+n+n-s)
             print(source_g_channel[0:30])
             ghead+=n
+            
+        #blue channel    
         elif cnt%3==2:
             f_tot=0
             for i in range(n):
